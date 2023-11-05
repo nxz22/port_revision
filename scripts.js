@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const rotatingImage = cdElement.querySelector('img');
     const songTitle = document.getElementById('songTitle');
   
-    // Initialize the player state
     let isPlaying = !musicBar.paused;
     
     function updateUI() {
@@ -28,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
         
         if (isPlaying) {
           rotatingImage.style.animationPlayState = 'running';
-          musicPrefix.textContent = "Now Playing"; // This text is updated based on the state
-          playPauseButton.src = 'assets/static/pause.png'; // Path to your pause button image
+          musicPrefix.textContent = "Now Playing";
+          playPauseButton.src = 'assets/static/pause.png';
           musicBar.play();
         } else {
           rotatingImage.style.animationPlayState = 'paused';
-          musicPrefix.textContent = "Music Paused"; // This text is updated based on the state
-          playPauseButton.src = 'assets/static/play.png'; // Path to your play button image
+          musicPrefix.textContent = "Music Paused"; 
+          playPauseButton.src = 'assets/static/play.png'; 
           musicBar.pause();
         }
     }
@@ -58,17 +57,14 @@ document.addEventListener('DOMContentLoaded', function () {
       updateUI();
     });
   
-    // Load the initial UI state
     updateUI();
-  
-    // Save the player state before the window unloads
+
     window.addEventListener('beforeunload', function() {
       localStorage.setItem('isPlaying', isPlaying);
       localStorage.setItem('lastTime', musicBar.currentTime);
       localStorage.setItem('lastSrc', musicBar.src);
     });
-  
-    // Load the last state if available
+
     window.addEventListener('load', function() {
       let lastTime = parseFloat(localStorage.getItem('lastTime')) || 0;
       let lastSrc = localStorage.getItem('lastSrc') || musicBar.src;
@@ -76,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (lastSrc === musicBar.src) {
         musicBar.currentTime = lastTime;
       }
-      // If `isPlaying` was stored as true, play the music
       if (localStorage.getItem('isPlaying') === 'true') {
         musicBar.play();
       }
@@ -130,31 +125,29 @@ function dragElement(element, handle) {
         pos3 = e.clientX;
         pos4 = e.clientY;
         document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
+        // call a function whenever the cursor moves
         document.onmousemove = elementDrag;
     }
 
     function elementDrag(e) {
         e.preventDefault();
         
-        // calculate the new cursor position:
+        // calculate the new cursor position
         pos1 = pos3 - e.clientX;
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
         
-        // set the element's new position:
+        // set the element's new position
         var newLeft = element.offsetLeft - pos1;
         var newTop = element.offsetTop - pos2;
         
-        // Get the boundaries of the window
         var winWidth = window.innerWidth;
         var winHeight = window.innerHeight;
         
         var elemWidth = element.offsetWidth;
         var elemHeight = element.offsetHeight;
         
-        // Check if the new position is within the viewport and adjust if not
         if (newLeft < 0) newLeft = 0;
         if (newTop < 0) newTop = 0;
         if (newLeft + elemWidth > winWidth) newLeft = winWidth - elemWidth;

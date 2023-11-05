@@ -1,4 +1,3 @@
-
   /*Mobile Menu*/
 
   .mobile-menu-option {
@@ -149,7 +148,7 @@ h4 {
 }
 
 .about-text p {
-    padding-top: 0px; /* Increase this value to add more space */
+    padding-top: 0px;
 }
 
 .divider-line {
