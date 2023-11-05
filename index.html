@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naz's portfolio</title>
+    <link rel="stylesheet" href="transfer-styles.css">
+    <link rel="stylesheet" href="index_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="music-container">
+        <div class="drag-handle">Dragggggggggggggg</div>
+
+        <audio id="musicBar" controls autoplay>
+            <source src="assets/music/nobonoko - Strawberry Cake.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- CD Asset -->
+        <div class="cd" id="cdElement">
+            <img src="assets/static/disc.png" alt="CD" class="rotating">
+        </div>
+      
+        <!-- Music with title at the top -->
+        <div class="music-info">
+            <p class="music-title" id="musicTitle">
+                <span class="music-prefix">Now Playing</span>
+                <span id="songTitle">nobonoko - Strawberry Cake</span>
+            </p>
+            <img src="assets/static/musicbar.png" alt="Backdrop" class="music-backdrop">
+            <img src="assets/static/play.png" alt="Play" id="playPauseButton" class="play-pause">
+        </div>
+      </div>
+      
+      
+    
+    <!-- Mobile Menu Button -->
+    <div id="mobileMenuButton">
+        <img src="assets/static/mb_menu.png" alt="Menu" onclick="toggleMenu()"> 
+    </div>
+
+    <div id="mobileFullscreenMenu" class="mobile-fullscreen-menu">
+        <!-- Options -->
+        <a href="" class="mobile-menu-option">
+            <img src="assets/static/home.png" alt="Home">
+            <span><strong>Home</strong></span>
+        </a>
+
+        <a href="tech.html" class="mobile-menu-option">
+            <img src="assets/static/tech.png" alt="Technical">
+            <span>Technical</span>
+        </a>
+
+        <a href="creative.html" class="mobile-menu-option">
+            <img src="assets/static/create.png" alt="Creative">
+            <span>Creative</span>
+        </a>
+
+        <a href="resume.html" class="mobile-menu-option">
+            <img src="assets/static/resume.png" alt="Resume">
+            <span>Resume</span>
+        </a>
+    </div>
+
+     <!-- Regular Menu -->
+    <div id="menuContainer" class="draggable">
+        <div class="drag-handle">Draggggg</div>
+
+        <img id="navbar" src="assets/static/navbar.png" class="navbar">
+      
+        <a href="" class="menu-item but_index">
+            <img src="assets/static/home.png">
+        </a>
+      
+        <a href="tech.html" class="menu-item but_tech">
+            <img src="assets/static/tech.png">
+        </a>
+      
+        <a href="creative.html" class="menu-item but_create">
+            <img src="assets/static/create.png">
+        </a>
+        
+        <a href="resume.html" class="menu-item but_resume">
+            <img src="assets/static/resume.png">
+        </a>
+      </div>
+
+    <div class="scroll-prompt">
+        scroll to discover more
+        <div class="arrow">v</div>
+    </div>
+
+    <div class="about-container fade-in">
+        <div class="about-content">
+            <h1 class="about-header"><span class="hi">hi!</span> <span class="name">i'm naz!</span></h1>
+            <h2 class="about-subtitle">innovator, illustrator, and developer</h2>
+            <img src="assets/static/test_about.png" alt="About Image" class="about-image">
+        </div>
+    </div>
+    
+<div class="hidden-content">
+
+    <h2 class="pro-experience-title">Professional Experience</h2>
+    
+    <div class="divider-line"></div> 
+    
+    
+    <!-- Resume section -->
+    <section id="resume" class="resume">
+        <div class="content">
+    
+    
+            <section class="resume-split">
+                <div class="resume-left">
+                    <h4>UI/UX Designer</h4>
+                    <p>NYU General Engineering Department<br>Aug 2023 - Present</p>
+                </div>
+                <div class="resume-right">
+                    <p>Solely responsible for orchestrating comprehensive website design, while refining UI/UX elements to elevate user engagement. Actively collaborated on a web development project to rebuild the course website's front and backend using HTML/CSS, JavaScript, and React, significantly improving functionality and user experience.</p>
+                </div>
+            </section>
+    
+    
+            <section class="resume-split">
+                <div class="resume-left">
+                    <h4>Engineering & Design Teaching Assistant</h4>
+                    <p>NYU General Engineering Department<br>Aug 2021 - Aug 2023</p>
+                </div>
+                <div class="resume-right">
+                    <p>Lead labs introducing first-year engineering students to key techniques and concepts in circuitry, CAD, prototyping, and programming. Solely mentored 21+ students in the creative, engineering process of original projects with 8+ students winning/were nominated for the NYU Gunter Georgi Award.</p>
+                </div>
+            </section>
+    
+    
+            <section class="resume-split">
+                <div class="resume-left">
+                    <h4>Audio Visual Technician</h4>
+                    <p>NYU Tandon Media Services <br>July 2023 - Present</p>
+                </div>
+                <div class="resume-right">
+                    <p>Professionally support faculty in implementing hybrid learning and swiftly resolve any technical issues related to audio-visual equipment in various campus spaces. Oversee AV setups across four buildings, comprehending room interconnectivity and ensuring optimal classroom functionality.</p>
+                </div>
+            </section>
+    
+        </div>
+    </section>
+    
+    <div class="divider-line"></div> 
+    
+    <div class="container">
+    
+    
+    <!-- What am I playing Section -->
+    <div class="content-section">
+        <div>
+            <h2>What I'm Playing</h2>
+            <p>Yakuza 5, Pokemon Scarlet, Omori</p>
+        </div>
+        <div class="image-container">
+            <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/9e022f45db1842518edd8c458cbb27da.jpg" alt="Game Image 1">
+            <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/a7fa5385c99fecb3642a8e1f7333b8a5.jpg" alt="Game Image 2">
+            <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/41122799a5d42984510813163abdf39a.jpg" alt="Game Image 3">
+        </div>
+    </div>
+    
+    <div class="divider-line"></div> 
+    
+    <!-- What am I listening to Section -->
+    <div class="content-section">
+        <div>
+            <h2>What I'm Listening To</h2>
+            <p>Atarashii Gakko, Carlos Eiene, Louie Zong</p>
+        </div>
+        <div class="image-container">
+            <img src="https://asobisystem.com/wp-content/uploads/2022/07/AG_202308-1024x683.jpg" alt="Song Image 1">
+            <img src="https://yt3.googleusercontent.com/xzP6tf7_hQ1ukpt4U01deQvd3K1S0DPxTUu_5kivVmraLUz7-H-pAgAg7VeX31WldnZqp_cd=s900-c-k-c0x00ffffff-no-rj" alt="Song Image 2">
+            <img src="https://yt3.googleusercontent.com/X5NHg97NZmTS4p3a4yJn4MKwOCpdwx8j0_6Aku3wpTQRmawphsoKJJ0eq3P9YdmgJhgLI-s_E9w=s900-c-k-c0x00ffffff-no-rj" alt="Song Image 3">
+        </div>
+    </div>
+    
+    </div>
+    
+    </div>
+
+      <script src="scripts.js"></script>
+      
+</body>
+</html>

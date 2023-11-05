@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naz's portfolio</title>
+    <link rel="stylesheet" href="transfer-styles.css">
+    <link rel="stylesheet" href="creative_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="music-container">
+        <div class="drag-handle">Dragggggggggggggg</div>
+
+        <audio id="musicBar" controls autoplay>
+            <source src="assets/music/nobonoko - Strawberry Cake.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- CD Asset -->
+        <div class="cd" id="cdElement">
+            <img src="assets/static/disc.png" alt="CD" class="rotating">
+        </div>
+      
+        <!-- Music with title at the top -->
+        <div class="music-info">
+            <p class="music-title" id="musicTitle">
+                <span class="music-prefix">Now Playing</span>
+                <span id="songTitle">nobonoko - Strawberry Cake</span>
+            </p>
+            <img src="assets/static/musicbar.png" alt="Backdrop" class="music-backdrop">
+            <img src="assets/static/play.png" alt="Play" id="playPauseButton" class="play-pause">
+        </div>
+      </div>
+      
+    <!-- Mobile Menu Button -->
+    <div id="mobileMenuButton">
+        <img src="assets/static/mb_menu.png" alt="Menu" onclick="toggleMenu()"> 
+    </div>
+
+    <div id="mobileFullscreenMenu" class="mobile-fullscreen-menu">
+        <!-- Options -->
+        <a href="index.html" class="mobile-menu-option">
+            <img src="assets/static/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+
+        <a href="tech.html" class="mobile-menu-option">
+            <img src="assets/static/tech.png" alt="Technical">
+            <span>Technical</span>
+        </a>
+
+        <a href="" class="mobile-menu-option">
+            <img src="assets/static/create.png" alt="Creative">
+            <span><strong>Creative</strong></span>
+        </a>
+
+        <a href="resume.html" class="mobile-menu-option">
+            <img src="assets/static/resume.png" alt="Resume">
+            <span>Resume</span>
+        </a>
+    </div>
+
+     <!-- Regular Menu -->
+    <div id="menuContainer" class="draggable">
+        <div class="drag-handle">Draggggg</div>
+
+        <img id="navbar" src="assets/static/navbar.png" class="navbar">
+      
+        <a href="index.html" class="menu-item but_index">
+            <img src="assets/static/home.png">
+        </a>
+      
+        <a href="tech.html" class="menu-item but_tech">
+            <img src="assets/static/tech.png">
+        </a>
+      
+        <a href="" class="menu-item but_create">
+            <img src="assets/static/create.png">
+        </a>
+        
+        <a href="resume.html" class="menu-item but_resume">
+            <img src="assets/static/resume.png">
+        </a>
+      </div>
+
+        <!-- About Section -->
+        <div class="about-container fade-in">
+            <div class="about-content">
+                <div class="about-text">
+                    <h4>creative gallery</h4>
+                    <p>This is my space to showcase projects that may not fit the traditional mold of professionalism, but are a testament to my skills and creativity.</p>
+                </div>
+            </div>
+            <div class="divider-line"></div> 
+        </div>
+    
+    
+        <!-- Gallery Section -->
+        <div class="gallery-container fade-in">
+            <a href="" class="gallery-item">
+                <div class="item-image">
+                    <img src="creative/monkey/gal.png" alt="Test Page Image">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-title">Training Monkeys with Pokémon</h3>
+                    <p class="item-description">Coming Soon</p>
+                </div>
+            </a>
+        </div>
+
+        
+
+      <script src="scripts.js"></script>
+      
+</body>
+</html>
